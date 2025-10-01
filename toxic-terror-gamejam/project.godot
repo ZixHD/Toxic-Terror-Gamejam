@@ -13,3 +13,18 @@ config_version=5
 config/name="Toxic Terror Gamejam"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg")
+
+[file_customization]
+
+folder_colors={
+"res://Assets/": "red",
+"res://Entity/": "orange",
+"res://Map/": "teal",
+"res://Singleton/": "purple",
+"res://UI/": "pink",
+"res://addons/": "green"
+}
