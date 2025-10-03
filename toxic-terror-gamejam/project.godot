@@ -24,7 +24,7 @@ folder_colors={
 "res://Assets/": "red",
 "res://Entity/": "orange",
 "res://Map/": "teal",
-"res://Scenes/": "gray",
+"res://Screens/": "gray",
 "res://Singleton/": "purple",
 "res://UI/": "pink",
 "res://Utils/": "yellow",

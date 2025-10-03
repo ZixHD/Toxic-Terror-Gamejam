@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://drcscnouos2qo"]
 
-[ext_resource type="Script" uid="uid://db7rhkrd3fr35" path="res://Scenes/IntroScene/intro_scene.gd" id="1_qef2n"]
+[ext_resource type="Script" uid="uid://db7rhkrd3fr35" path="res://Screens/IntroScene/intro_scene.gd" id="1_qef2n"]
 [ext_resource type="VideoStream" uid="uid://uwr1a34s5jjh" path="res://Assets/Scenes/IntroScene/intro.ogv" id="2_qst6k"]
 
 [sub_resource type="Animation" id="Animation_pseuf"]
