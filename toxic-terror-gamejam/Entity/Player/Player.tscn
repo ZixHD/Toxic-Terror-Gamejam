@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=3 uid="uid://ctu01ogyncypp"]
+
+[ext_resource type="Texture2D" uid="uid://bct5o0vsn6aed" path="res://icon.svg" id="1_367n4"]
+[ext_resource type="Script" uid="uid://bueu1o5xeq1wo" path="res://Entity/Player/player.gd" id="1_ic0o1"]
+[ext_resource type="Script" uid="uid://64vdm6c8cv1u" path="res://Utils/StatePattern/StateMachine.gd" id="3_43y4t"]
+[ext_resource type="Script" uid="uid://ug7ddkxvbd2" path="res://Utils/StatePattern/IdleState.gd" id="4_wu0n7"]
+[ext_resource type="Script" uid="uid://fjjyt38jtyg" path="res://Utils/StatePattern/WalkState.gd" id="5_vk8em"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ic0o1"]
+size = Vector2(123, 122)
+
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
+script = ExtResource("1_ic0o1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_367n4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_ic0o1")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+script = ExtResource("3_43y4t")
+initial_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="StateMachine"]
+script = ExtResource("4_wu0n7")
+
+[node name="Walk" type="Node" parent="StateMachine"]
+script = ExtResource("5_vk8em")
