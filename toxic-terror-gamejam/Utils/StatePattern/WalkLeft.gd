@@ -10,14 +10,16 @@ func Enter():
 	pass
 	
 func Physics_Update(_delta: float):
-	var direction = Input.get_axis("left", "right")
+	var direction_x = Input.get_axis("left", "right")
+	var direction_y = Input.get_axis("up", "down")
 	
-	if direction == 0:
+	if direction_x == 0:
 		Transitioned.emit(self, "idleleft")
 		return
-	if direction > 0:
+	if direction_x > 0:
 		Transitioned.emit(self, "walkR")
 		return
-	player.velocity.x = direction * player.speed
+	player.velocity.x = direction_x * player.speed
+	player.velocity.y = direction_y * player.speed
 	player.move_and_slide()
 	
