@@ -143,10 +143,6 @@ tile_set = SubResource("TileSet_lhw50")
 [node name="Player" parent="." instance=ExtResource("1_hxx1a")]
 position = Vector2(670, 146)
 
-[node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(247, -29)
-zoom = Vector2(2, 2)
-
 [node name="Door" type="StaticBody2D" parent="."]
 position = Vector2(804, 108)
 
@@ -160,3 +156,6 @@ position = Vector2(556, 108)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boxes"]
 position = Vector2(-26, 8.25)
 shape = SubResource("RectangleShape2D_3d36u")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(469, 117)

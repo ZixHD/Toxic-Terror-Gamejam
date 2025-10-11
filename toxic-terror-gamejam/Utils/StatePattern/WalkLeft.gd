@@ -12,13 +12,27 @@ func Enter():
 func Physics_Update(_delta: float):
 	var direction_x = Input.get_axis("left", "right")
 	var direction_y = Input.get_axis("up", "down")
+	var running_flag = Input.is_action_pressed("run")
+	
+	if player.stamina >= player.max_stamina * 0.25:
+		player.can_run = true
+
 	
 	if direction_x == 0:
 		Transitioned.emit(self, "idleleft")
 		return
 	if direction_x > 0:
-		Transitioned.emit(self, "walkR")
+		Transitioned.emit(self, "walkright")
 		return
+		
+	if player.can_run:
+		if running_flag and direction_x < 0:
+			Transitioned.emit(self, "runningleft")
+		elif running_flag and direction_x > 0:
+			Transitioned.emit(self, "runningright")
+	
+	player.stamina += player.stamina_recovery_rate * _delta
+	player.stamina = min(player.stamina, player.max_stamina)
 	player.velocity.x = direction_x * player.speed
 	player.velocity.y = direction_y * player.speed
 	player.move_and_slide()
