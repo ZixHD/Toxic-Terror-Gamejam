@@ -5,7 +5,6 @@ class_name WalkLeft
 @onready var animation_player: AnimationPlayer = $"../../AnimationPlayer"
 
 func Enter():
-	print("usao walk lefta")
 	animation_player.play("walkL")
 	pass
 	

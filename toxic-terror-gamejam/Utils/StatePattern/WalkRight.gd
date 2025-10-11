@@ -15,7 +15,7 @@ func Physics_Update(_delta: float):
 	
 	if player.stamina >= player.max_stamina * 0.25:
 		player.can_run = true
-	print("ov")
+
 	if direction_x == 0:
 		Transitioned.emit(self, "idleright")
 		return

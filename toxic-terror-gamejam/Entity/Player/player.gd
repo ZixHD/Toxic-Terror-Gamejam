@@ -9,4 +9,4 @@ var stamina_recovery_rate: float = 15.0
 var can_run: bool = true
 
 func _physics_process(delta: float) -> void:
-	print(stamina)
+	pass

@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dg17rlvu6dhy2"]
+
+[ext_resource type="Script" uid="uid://ciqo7110j420t" path="res://Entity/KeyPad/key_pad.gd" id="1_iwc8n"]
+[ext_resource type="PackedScene" uid="uid://ln0u1gs5g330" path="res://Utils/Interaction/interaction_area/interaction_area.tscn" id="1_klqvm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lhw50"]
+size = Vector2(58, 127.625)
+
+[node name="KeyPad" type="StaticBody2D"]
+script = ExtResource("1_iwc8n")
+
+[node name="InteractionArea" parent="." instance=ExtResource("1_klqvm")]
+position = Vector2(0, -1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("RectangleShape2D_lhw50")

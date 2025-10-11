@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://bxs3kw4grss7j"]
+[gd_scene load_steps=8 format=4 uid="uid://bxs3kw4grss7j"]
 
 [ext_resource type="PackedScene" uid="uid://ctu01ogyncypp" path="res://Entity/Player/Player.tscn" id="1_hxx1a"]
 [ext_resource type="Texture2D" uid="uid://b528bfukrqv0k" path="res://Assets/Map/Entrance.png" id="1_kmgeg"]
+[ext_resource type="PackedScene" uid="uid://dg17rlvu6dhy2" path="res://Entity/KeyPad/key_pad.tscn" id="3_lhw50"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3d36u"]
 texture = ExtResource("1_kmgeg")
@@ -129,33 +130,40 @@ sources/0 = SubResource("TileSetAtlasSource_3d36u")
 size = Vector2(30, 167)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3d36u"]
-size = Vector2(174, 73.5)
+size = Vector2(148, 49.75)
 
 [node name="Node2D" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 texture_filter = 1
 texture_repeat = 1
-scale = Vector2(3, 3)
+scale = Vector2(2.5, 2.5)
 tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAEAAAAAAAIAAAAAAAIAAAAAAAMAAAAAAAMAAAAAAAQAAAAAAAQAAAABAAAAAAABAAAAAAABAAEAAAABAAEAAAABAAIAAAABAAIAAAABAAMAAAABAAMAAAABAAQAAAABAAQAAAACAAAAAAACAAAAAAACAAEAAAACAAEAAAACAAIAAAACAAIAAAACAAMAAAACAAMAAAACAAQAAAACAAQAAAADAAAAAAADAAAAAAADAAEAAAADAAEAAAADAAIAAAADAAIAAAADAAMAAAADAAMAAAADAAQAAAADAAQAAAAEAAAAAAAEAAAAAAAEAAEAAAAEAAEAAAAEAAIAAAAEAAIAAAAEAAMAAAAEAAMAAAAEAAQAAAAEAAQAAAAFAAAAAAAFAAAAAAAFAAEAAAAFAAEAAAAFAAIAAAAFAAIAAAAFAAMAAAAFAAMAAAAFAAQAAAAFAAQAAAAGAAAAAAAGAAAAAAAGAAEAAAAGAAEAAAAGAAIAAAAGAAIAAAAGAAMAAAAGAAMAAAAGAAQAAAAGAAQAAAAHAAAAAAAHAAAAAAAHAAEAAAAHAAEAAAAHAAIAAAAHAAIAAAAHAAMAAAAHAAMAAAAHAAQAAAAHAAQAAAAIAAAAAAAIAAAAAAAIAAEAAAAIAAEAAAAIAAIAAAAIAAIAAAAIAAMAAAAIAAMAAAAIAAQAAAAIAAQAAAAJAAAAAAAJAAAAAAAJAAEAAAAJAAEAAAAJAAIAAAAJAAIAAAAJAAMAAAAJAAMAAAAJAAQAAAAJAAQAAAAKAAAAAAAKAAAAAAAKAAEAAAAKAAEAAAAKAAIAAAAKAAIAAAAKAAMAAAAKAAMAAAAKAAQAAAAKAAQAAAALAAAAAAALAAAAAAALAAEAAAALAAEAAAALAAIAAAALAAIAAAALAAMAAAALAAMAAAALAAQAAAALAAQAAAAMAAAAAAAMAAAAAAAMAAEAAAAMAAEAAAAMAAIAAAAMAAIAAAAMAAMAAAAMAAMAAAAMAAQAAAAMAAQAAAANAAAAAAANAAAAAAANAAEAAAANAAEAAAANAAIAAAANAAIAAAANAAMAAAANAAMAAAANAAQAAAANAAQAAAAOAAAAAAAOAAAAAAAOAAEAAAAOAAEAAAAOAAIAAAAOAAIAAAAOAAMAAAAOAAMAAAAOAAQAAAAOAAQAAAAPAAAAAAAPAAAAAAAPAAEAAAAPAAEAAAAPAAIAAAAPAAIAAAAPAAMAAAAPAAMAAAAPAAQAAAAPAAQAAAAQAAAAAAAQAAAAAAAQAAEAAAAQAAEAAAAQAAIAAAAQAAIAAAAQAAMAAAAQAAMAAAAQAAQAAAAQAAQAAAA=")
 tile_set = SubResource("TileSet_lhw50")
 
 [node name="Player" parent="." instance=ExtResource("1_hxx1a")]
-position = Vector2(670, 146)
+position = Vector2(558, 105)
 
 [node name="Door" type="StaticBody2D" parent="."]
-position = Vector2(804, 108)
+position = Vector2(672, 81)
 
 [node name="Door_Collision" type="CollisionShape2D" parent="Door"]
 position = Vector2(2, 2)
 shape = SubResource("RectangleShape2D_kmgeg")
 
 [node name="Boxes" type="StaticBody2D" parent="."]
-position = Vector2(556, 108)
+position = Vector2(464, 83)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Boxes"]
-position = Vector2(-26, 8.25)
+position = Vector2(-24, 19.875)
 shape = SubResource("RectangleShape2D_3d36u")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(469, 117)
+zoom = Vector2(2, 2)
+
+[node name="KeyPad" parent="." instance=ExtResource("3_lhw50")]
+position = Vector2(634, 74)
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.09239707, 0.09239706, 0.09239706, 1)
