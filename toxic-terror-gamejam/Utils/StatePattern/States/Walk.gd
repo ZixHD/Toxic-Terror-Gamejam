@@ -5,9 +5,8 @@ class_name Walk
 @onready var animation_player: AnimationPlayer = $"../../AnimationPlayer"
 
 func Enter():
-	print("sao u walk")
 	_update_animation()
-
+	print("walk")
 func _update_animation():
 	if player.last_facing_direction == "right":
 		animation_player.play("walkR")
@@ -20,15 +19,29 @@ func Physics_Update(_delta: float):
 	var direction_y = Input.get_axis("up", "down")
 	var running_flag = Input.is_action_pressed("run")
 	
+	_change_state(direction_x, direction_y, running_flag)
 	
-	if direction_x < 0:
-		player.last_facing_direction = "left"
-	elif direction_x > 0:
-		player.last_facing_direction = "right"
 		
 	if player.stamina >= player.max_stamina * 0.25:
 		player.can_run = true
 
+	
+	
+	
+	player.stamina += player.stamina_recovery_rate * _delta
+	player.stamina = min(player.stamina, player.max_stamina)
+	player.velocity.x = direction_x * player.speed
+	player.velocity.y = direction_y * player.speed
+	
+	player.move_and_slide()
+	
+	
+func _change_state(direction_x, direction_y, running_flag):
+	if direction_x < 0:
+		player.last_facing_direction = "left"
+	elif direction_x > 0:
+		player.last_facing_direction = "right"
+	_update_animation()
 	
 	if direction_x == 0 and direction_y == 0:
 		Transitioned.emit(self, "idle")
@@ -38,11 +51,8 @@ func Physics_Update(_delta: float):
 		if running_flag and direction_x != 0:
 			Transitioned.emit(self, "running")
 	
-	player.stamina += player.stamina_recovery_rate * _delta
-	player.stamina = min(player.stamina, player.max_stamina)
-	player.velocity.x = direction_x * player.speed
-	player.velocity.y = direction_y * player.speed
+	if player.cutscene:
+		Transitioned.emit(self, "cutscene")
+		return
 	
-	player.move_and_slide()
-	_update_animation()
 	

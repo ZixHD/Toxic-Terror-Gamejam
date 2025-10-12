@@ -1,7 +1,8 @@
-[gd_scene load_steps=15 format=4 uid="uid://ctu01ogyncypp"]
+[gd_scene load_steps=16 format=4 uid="uid://ctu01ogyncypp"]
 
 [ext_resource type="Script" uid="uid://bueu1o5xeq1wo" path="res://Entity/Player/Player.gd" id="1_ic0o1"]
 [ext_resource type="Script" uid="uid://64vdm6c8cv1u" path="res://Utils/StatePattern/StateMachine.gd" id="3_43y4t"]
+[ext_resource type="Script" uid="uid://c6qw4v5pbwbi0" path="res://Utils/StatePattern/States/Cutscene.gd" id="6_wu0n7"]
 [ext_resource type="Script" uid="uid://mc5su1x4bvcx" path="res://Utils/StatePattern/States/Running.gd" id="7_vk8em"]
 [ext_resource type="Script" uid="uid://ijddmmpv3k2e" path="res://Utils/StatePattern/States/Walk.gd" id="9_mxhgp"]
 [ext_resource type="Script" uid="uid://c2b8whvj6o5uf" path="res://Utils/StatePattern/States/Idle.gd" id="10_awppf"]
@@ -175,3 +176,6 @@ script = ExtResource("10_awppf")
 
 [node name="Running" type="Node" parent="StateMachine"]
 script = ExtResource("7_vk8em")
+
+[node name="Cutscene" type="Node" parent="StateMachine"]
+script = ExtResource("6_wu0n7")

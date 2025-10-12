@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=4 uid="uid://bxs3kw4grss7j"]
+[gd_scene load_steps=13 format=4 uid="uid://bxs3kw4grss7j"]
 
 [ext_resource type="PackedScene" uid="uid://ctu01ogyncypp" path="res://Entity/Player/Player.tscn" id="1_hxx1a"]
 [ext_resource type="Texture2D" uid="uid://b528bfukrqv0k" path="res://Assets/Map/Entrance.png" id="1_kmgeg"]
 [ext_resource type="Texture2D" uid="uid://c2wgwwhw7tct5" path="res://Assets/Map/WholeMap.png" id="2_lhw50"]
 [ext_resource type="PackedScene" uid="uid://dg17rlvu6dhy2" path="res://Entity/KeyPad/key_pad.tscn" id="3_lhw50"]
 [ext_resource type="Script" uid="uid://b4o2tnpc0heat" path="res://Map/door_1.gd" id="5_0q0wn"]
+[ext_resource type="PackedScene" uid="uid://cqjl7myebbg2s" path="res://Entity/Elevator/elevator.tscn" id="6_tyb8m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3d36u"]
 texture = ExtResource("1_kmgeg")
@@ -422,9 +423,13 @@ texture = ExtResource("2_lhw50")
 11:5/0 = 0
 11:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5.2159023, -8, 8, -8, 8, 4.4964676)
 12:5/0 = 0
+12:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 4.3166103, 8, 4.3166103, 8, -8)
 13:5/0 = 0
+13:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 4.3166103, 8, 4.3166103, 8, -8)
 14:5/0 = 0
+14:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 4.3166103, 8, 4.3166103, 8, -8)
 15:5/0 = 0
+15:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 4.3166103, 8, 4.3166103, 8, -8)
 16:5/0 = 0
 16:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 5.036045, 5.3957634, -8)
 17:5/0 = 0
@@ -709,6 +714,9 @@ script = ExtResource("5_0q0wn")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/Door_1"]
 position = Vector2(2, 10.5)
 shape = SubResource("RectangleShape2D_lhw50")
+
+[node name="Elevator" parent="." instance=ExtResource("6_tyb8m")]
+position = Vector2(-367, 240)
 
 [connection signal="body_entered" from="Doors/Door_1" to="Doors/Door_1" method="_on_body_entered"]
 [connection signal="body_exited" from="Doors/Door_1" to="Doors/Door_1" method="_on_body_exited"]

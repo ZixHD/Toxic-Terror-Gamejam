@@ -7,6 +7,7 @@ class_name Idle
 var rng = RandomNumberGenerator.new()
 
 func Enter():
+	print("idle")
 	_update_animation()
 	
 func _update_animation():
@@ -28,10 +29,8 @@ func Physics_Update(_delta: float):
 	var direction_x = Input.get_axis("left", "right")
 	var direction_y = Input.get_axis("up", "down")
 	
-	if direction_x != 0 or direction_y != 0:
-		Transitioned.emit(self, "walk")
-		return
-
+	_change_state(direction_x, direction_y)
+	
 	
 	if player.stamina >= player.max_stamina * 0.25:
 		player.can_run = true
@@ -39,4 +38,11 @@ func Physics_Update(_delta: float):
 	player.stamina += player.stamina_recovery_rate * _delta
 	player.stamina = min(player.stamina, player.max_stamina)	
 	
+func _change_state(direction_x, direction_y):
+	if direction_x != 0 or direction_y != 0:
+		Transitioned.emit(self, "walk")
+		return
+	if player.cutscene:
+		Transitioned.emit(self, "cutscene")
+		return
 	

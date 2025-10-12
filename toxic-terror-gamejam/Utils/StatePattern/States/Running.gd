@@ -19,6 +19,18 @@ func Physics_Update(_delta: float):
 	var direction_x = Input.get_axis("left", "right")
 	var direction_y = Input.get_axis("up", "down")
 	
+	_change_state(direction_x)
+		
+	player.stamina -= player.stamina_drain_rate * _delta
+	player.stamina = max(player.stamina, 0)
+	
+	player.velocity.x = direction_x * player.running_speed
+	player.velocity.y = direction_y * player.running_speed
+	player.move_and_slide()
+	
+
+func _change_state(direction_x):
+	
 	if direction_x < 0:
 		player.last_facing_direction = "left"
 	elif direction_x > 0:
@@ -31,11 +43,8 @@ func Physics_Update(_delta: float):
 		player.can_run = false
 		Transitioned.emit(self, "walk")
 		return
-		
-	player.stamina -= player.stamina_drain_rate * _delta
-	player.stamina = max(player.stamina, 0)
 	
-	player.velocity.x = direction_x * player.running_speed
-	player.velocity.y = direction_y * player.running_speed
-	player.move_and_slide()
+	if player.cutscene:
+		Transitioned.emit(self, "cutscene")
+		return
 	
