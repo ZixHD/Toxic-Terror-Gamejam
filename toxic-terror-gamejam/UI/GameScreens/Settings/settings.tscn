@@ -1,16 +1,14 @@
 [gd_scene load_steps=4 format=3 uid="uid://by88lr47yw5hw"]
 
-[ext_resource type="Script" uid="uid://jtvqtoic8q81" path="res://Levels/Screens/Settings/settings.gd" id="1_kb38p"]
-[ext_resource type="PackedScene" uid="uid://dw4bg1cc3wnf7" path="res://Singleton/Audio/volume_slider.tscn" id="1_xtqq6"]
-[ext_resource type="PackedScene" uid="uid://comisw3tbg43c" path="res://Levels/Screens/InputSettings/input_settings.tscn" id="3_3yai5"]
+[ext_resource type="Script" uid="uid://jtvqtoic8q81" path="res://UI/GameScreens/Settings/settings.gd" id="1_kb38p"]
+[ext_resource type="PackedScene" uid="uid://dw4bg1cc3wnf7" path="res://UI/GameScreens/Audio/volume_slider.tscn" id="1_xtqq6"]
+[ext_resource type="PackedScene" uid="uid://comisw3tbg43c" path="res://UI/GameScreens/InputSettings/input_settings.tscn" id="3_3yai5"]
 
 [node name="Settings" type="Control"]
 layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_kb38p")
@@ -24,7 +22,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -121.0
 offset_top = -105.0
-offset_right = 119.0
+offset_right = 118.0
 offset_bottom = 106.0
 grow_horizontal = 2
 grow_vertical = 2

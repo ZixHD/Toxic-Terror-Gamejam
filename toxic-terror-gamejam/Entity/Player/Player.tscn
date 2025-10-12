@@ -131,7 +131,7 @@ scale = Vector2(2, 2)
 texture = SubResource("PortableCompressedTexture2D_0s3jf")
 hframes = 5
 vframes = 5
-frame = 7
+frame = 18
 metadata/_aseprite_wizard_interface_config_ = {
 "pending_changes": {}
 }

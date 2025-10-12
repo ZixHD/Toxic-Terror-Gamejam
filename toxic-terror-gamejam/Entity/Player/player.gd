@@ -12,7 +12,4 @@ var cutscene: bool = false
 const GRAVITY = 1500.0;
 
 func physics_process(_delta: float) -> void:
-	if cutscene:
-		velocity = Vector2.ZERO
-		
 	pass

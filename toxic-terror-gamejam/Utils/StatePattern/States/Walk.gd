@@ -51,7 +51,7 @@ func _change_state(direction_x, direction_y, running_flag):
 		if running_flag and direction_x != 0:
 			Transitioned.emit(self, "running")
 	
-	if player.cutscene:
+	if player.cutscene or Engine.time_scale == 0:
 		Transitioned.emit(self, "cutscene")
 		return
 	

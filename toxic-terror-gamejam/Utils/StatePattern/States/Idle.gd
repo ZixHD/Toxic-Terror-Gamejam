@@ -42,7 +42,7 @@ func _change_state(direction_x, direction_y):
 	if direction_x != 0 or direction_y != 0:
 		Transitioned.emit(self, "walk")
 		return
-	if player.cutscene:
+	if player.cutscene or Engine.time_scale == 0:
 		Transitioned.emit(self, "cutscene")
 		return
 	
