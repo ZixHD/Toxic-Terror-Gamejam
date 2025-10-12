@@ -1,5 +1,5 @@
 extends State
-class_name IdleLeft
+class_name Idle
 
 @onready var player = get_tree().get_first_node_in_group("Player")
 @onready var animation_player: AnimationPlayer = $"../../AnimationPlayer"
@@ -7,23 +7,31 @@ class_name IdleLeft
 var rng = RandomNumberGenerator.new()
 
 func Enter():
-	#anim play idle
+	_update_animation()
+	
+func _update_animation():
 	var num = rng.randi_range(1, 2)
-	if num == 1:
-		animation_player.play("idle1L")
+	if player.last_facing_direction == "left":
+		if num == 1:
+			animation_player.play("idle1L")
+		else:
+			animation_player.play("idle2L")
+		pass
 	else:
-		animation_player.play("idle2L")
-	pass
+		if num == 1:
+			animation_player.play("idle1R")
+		else:
+			animation_player.play("idle2R")
+		pass
 
 func Physics_Update(_delta: float):
-	var direction = Input.get_axis("left", "right")
+	var direction_x = Input.get_axis("left", "right")
+	var direction_y = Input.get_axis("up", "down")
 	
-	if direction < 0:
-		Transitioned.emit(self, "walkleft")
+	if direction_x != 0 or direction_y != 0:
+		Transitioned.emit(self, "walk")
 		return
-	elif direction > 0:
-		Transitioned.emit(self, "walkright")
-		return
+
 	
 	if player.stamina >= player.max_stamina * 0.25:
 		player.can_run = true

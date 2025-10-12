@@ -1,25 +1,35 @@
 extends State
-class_name RunningLeft
+class_name Running
 
 @onready var player = get_tree().get_first_node_in_group("Player")
 @onready var animation_player: AnimationPlayer = $"../../AnimationPlayer"
 
 
 func Enter():
-
-	animation_player.play("walkL")
+	_update_animation()
+	
+func _update_animation():
+	if player.last_facing_direction == "right":
+		animation_player.play("walkR")
+	else:
+		animation_player.play("walkL")
 	pass
 	
 func Physics_Update(_delta: float):
 	var direction_x = Input.get_axis("left", "right")
 	var direction_y = Input.get_axis("up", "down")
 	
+	if direction_x < 0:
+		player.last_facing_direction = "left"
+	elif direction_x > 0:
+		player.last_facing_direction = "right"
+	
 	if direction_x == 0:
-		Transitioned.emit(self, "idleleft")
+		Transitioned.emit(self, "idle")
 		return
 	if player.stamina <= 0:
 		player.can_run = false
-		Transitioned.emit(self, "walkleft")
+		Transitioned.emit(self, "walk")
 		return
 		
 	player.stamina -= player.stamina_drain_rate * _delta

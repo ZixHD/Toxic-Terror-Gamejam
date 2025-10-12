@@ -1,21 +1,18 @@
-[gd_scene load_steps=18 format=4 uid="uid://ctu01ogyncypp"]
+[gd_scene load_steps=15 format=4 uid="uid://ctu01ogyncypp"]
 
 [ext_resource type="Script" uid="uid://bueu1o5xeq1wo" path="res://Entity/Player/Player.gd" id="1_ic0o1"]
 [ext_resource type="Script" uid="uid://64vdm6c8cv1u" path="res://Utils/StatePattern/StateMachine.gd" id="3_43y4t"]
-[ext_resource type="Script" uid="uid://cp1r724xlqmlc" path="res://Utils/StatePattern/IdleRight.gd" id="4_43y4t"]
-[ext_resource type="Script" uid="uid://ug7ddkxvbd2" path="res://Utils/StatePattern/IdleLeft.gd" id="4_wu0n7"]
-[ext_resource type="Script" uid="uid://fjjyt38jtyg" path="res://Utils/StatePattern/WalkLeft.gd" id="5_vk8em"]
-[ext_resource type="Script" uid="uid://dvouxy3ik36g0" path="res://Utils/StatePattern/WalkRight.gd" id="6_wu0n7"]
-[ext_resource type="Script" uid="uid://bjm6ryal0bqyd" path="res://Utils/StatePattern/RunningLeft.gd" id="7_3xy24"]
-[ext_resource type="Script" uid="uid://drx7oivytxypc" path="res://Utils/StatePattern/RunningRight.gd" id="8_mxhgp"]
+[ext_resource type="Script" uid="uid://mc5su1x4bvcx" path="res://Utils/StatePattern/States/Running.gd" id="7_vk8em"]
+[ext_resource type="Script" uid="uid://ijddmmpv3k2e" path="res://Utils/StatePattern/States/Walk.gd" id="9_mxhgp"]
+[ext_resource type="Script" uid="uid://c2b8whvj6o5uf" path="res://Utils/StatePattern/States/Idle.gd" id="10_awppf"]
 
 [sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_0s3jf"]
 _data = PackedByteArray("AAADAAUAAAABAAAA8AAAAPAAAADGCQAAUklGRr4JAABXRUJQVlA4TLIJAAAv78A7EI+gJgCQBlDP3cAYtjaICfyp4B41lNa208jYTJAJEopnf8UOqK46jgPbyLZShbj2QAnE2n9MAQwFOHwJ5j841tUfJST5XlyR1V4OttZ+PyHiMO9p8RuLAI9N6I62hXJZYgu+JcmuW9u2LYkiK5NZSKkA//+1QAG7WQIV6q33cYnoPwS3bSRJStXsvVDsXmDfkP9LYVAnYz456D2Fjq84439Nn8Owub2a2TF+8fIcRvXEa29n/OL1OQzqWfzgZbDvv6B4dQ5jeiJqtosNX3yHHEbMLWj+/NTPI+dxi++Xw5CegKfHkfxxlPd/QfH6HFSeeCTHQ5Wbe6rj7pXRi1fnMGpuSAW4I6ItvsODq89hTM/M5FhXrFVzEsXf5TCoJ4kVvqLuNYfiiZschvQkjaSTyDrPmyKH9SQA1Kv2lFkarbKBulpCkc/nE1pPX2WetzmM6Ml3ZSsYKBONRdYj9sRTY8r3X+QwnicXsmDczCBiYbNXPWJPag6XNgeEHIbzJJ0wM1pAJhpz0HvWowuCFvcazxMeNTcd8JscRvYMteg9e+DqvWbkqa3dICM1DO5pes8OQEi62evzmY+nSlO9FxIi12cZ2HPr5anSNOVeGSm1e6VrXE/jtnXyVGlq98poPVO6rmE9SWBYTyTI92o9c5lxPTGwJ/R7/QpPkvymnudZOM/v6clv7In8B+zJL+oZDckv6slv63mUiT/3B+b5P/oHGXW+aG6vOGN/qUkCes8xc8P+akb9GIozazbTe46Z297Oq0+NWtXXDr3niLlh3+FlUEzVNSrfvG6y0HuqcxPeVhTix1DHfhcF9J4D5pbx8+NeP48+NWpM76OA3lOdm4bj4el4JAf2LK9R9hbuMQzoPdW5qXD3VMe9w2OoAvD0OJI/Dug95bmpgDuqKOSPoe7Dmxwces8OuWlEV6wrPDF3eAxVi8UQ3OHQe2pzE8aA1bGChTFrJA3JaxQr9J7a3MCsO6STNFJco8oz7AOs8BV4PnN+Sj2z6oTR5ZaJrWI0kSmez2eoUbUY30ZjTOJZRuqpz01XPKywVd4Sym1qFGlyIW2j08BwtJ5ZndtbBMw2WoFcqLntXlw00InNuFn4y35qPVUAbW6LDqOZgU4q95Jpwgt1sZCb1FOLMcYmZGPAId7LISM+JvAs91QRitflkF2Oq/eCJzlJjXegftiHJCMVLPD56D1lWMhBB5R8Pjd7JR1IiFyfRe+pz0HpqRJdPlcECaoekVJlK6Rr0XuqcthuchB6lgsNV2r2Ev4niwQYtw0pXZfeU5TDttGaHJSeKtHrSqn1lP6bSQLIPTxFOTSeCWJPZXCtpxZUOniOvZg6ODUkqYUklbSemIUnzrNwnsh6T73oLDwph/3gLDxDZGqQ9YTvG9zzbw+UQy2MzMIzJkYiqz2VkDGNWXiSctgLchaeR5n4c39gnv8nZ5BRZ/i1JuKZX3F0sgh0WmsSnthfzch6vKldvtYsPPPezkv1tq2xx1qT8MS+w8ugqIpuM13Wmolnawptjeix1vieond+ftzr56FpJu6FWKN+rV/gKeIBTw8kBxQAaFrUHRwPT8cjrDW8pwx3T3XcodGsJaZKj7XG95QBd1RTkaf78SjA912/1iQ8c8aKdYWrPNG0CAegXsvI8T1VYHWsAIU1evPUqng2a1EQxLN89ARuPbWxUXjC6NZasXqdLOJZpl3L3tRo8s5TA+WemdjopKkOsAIrqbyE0bkZuVCjeeupoZ+nrhcA3MyMskPANtoGuqKdZ85iz9zRU9hLJn2j8OSK0azgmI0nmVXHaG8djlBkZAqevPdUsYG2sAPJMQfPHhCgQcTnE7BCKgzuKcVCLzrg7lSxfK4IEgqDe+p70VEN3WVcqbBVUsIUPD9X6wkZSBVQxHWlhG2jAQnje8p6D56xFyFgg+w/BQLA8J66XhrPcoUAAKQgMB1PJZBDkoWJeyJUI+Q8C+eJGXlK3zlJOfP2zEC1FFO/b96eGeF8Y6iDDbP2zCBJKUEQhcl4qsnlHGLIPGvPzPD9PA7ROYLfESyn7BkVj+9LFP2/LIOuynOIAXrC5N9i22GhAUXxCqPODK2tPo4OMShFlZq3mXWQ1RfTYaPhRPd2tFXidaPbIY0OMShFVcDdgTYy3XIIuvveoZgOMQwmCsDrVHbp3RtdQF+MLIaBc4P//HjqQaq+6FJMhxhGE3U/HgW4Fkfhcbh3KKZDDMOJwj3VQfyb0D27CLLu0BfTIQatqAi4+21kwuXcHY4OxXSIYTzRFavXydIJokUYPYrpEMNwosAKrASzdsg1CHcopkMMQ4oCNFJ6aGYbAShN0RTTIQaV6EbTmZJwkptRe7m5tBmSRoiKYbQ0Y1bmtm1aUbiTZm8lbws9ioupnipVVM+3sPaK0d46U4KsLMomFyM2Ke96kGUDpy1GCmFlWaTYRgqDIIyA8oUhNpeBlLwcmhQzkFRim8HdlYu5O4SE0NxTguomLwdiEFSlvajxkJoSMJgmyC5A04Iqq8vBIykJIWJqQoyQqdb1UUfIh0BS8vnckIQQclDHRW/ikDqWD1IFlGmmCISgjhgSYXSmYq4AdFzXFYNTAzlRUgplXFdGuJRppgR161RrZlIOKicp9QwIPXkCoDC2M76n9KxA/vY8T6knSOiRnZABAR3nWaCeXA+VnicphtQRr4wmLjk1A/HhqYWFgzypfQvlDbLaL0SK8yETDUDIeQKsRwaFuR3nyUjW0r45DhkUN1mIrockuVqHjuOIb3vBgvRqOSrHoaC4NcHJYA+OIyZQg1CKKrlbK4tok5BZNpo9OMTkrKao6iS1HDf8H7DBN80NdSbEuLkBrzCYznM4bG54tYPpPIeD5ga89nbUz+FvOIPmVvwAd8e+d3gOh58xc9srXgeA/Dkc/3bITUfynx+HvMdfgT43EY7C43Dv0ePojJkbAEeq4w51j7/gK4PmluFeJR2ODs/h8O90yE00XmfFig49jn/0uakguAIrIO/xFzBqbiSNANChx1m8R+MmzY22kXSQ+h6ngZltmzK3txnpBXmP87jvt9EqMs+lQoIdepwFy1KhDpDcrNKhx2l8hYSZEHeHbVZQ9zgPQHeHHKt06HEaxz0lKEkp4toe50MC+BGRbvh8pD3OBKKS8FlkIJI+i7zHeYDApSOhznVdi7zHafxgOMjXpXpMmknputQ9TgUA2ucQJ9Glx3n8KoJK2NChx3kMeVIMWVH3OBuksfEkjwLFPU4FBLSXQDHV9zgVSB1HdCzoe5wJ2nMcR+VQQ06Go07WHcZfd+h7nMkEpJIRfY/fdCL/nTAZ")
 size_override = Vector2(240, 240)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0s3jf"]
-radius = 12.0
-height = 24.0
+radius = 8.0
+height = 22.0
 
 [sub_resource type="Animation" id="Animation_vk8em"]
 length = 2.5
@@ -158,7 +155,7 @@ metadata/_aseprite_wizard_config_ = {
 metadata/_aseprite_wizard_source_file_hash_ = "0b62e447bfc28ba452b0858034935671"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(3, 26)
+position = Vector2(1, 25)
 shape = SubResource("CapsuleShape2D_0s3jf")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -168,22 +165,13 @@ libraries = {
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
 script = ExtResource("3_43y4t")
-initial_state = NodePath("IdleLeft")
+initial_state = NodePath("Idle")
 
-[node name="IdleLeft" type="Node" parent="StateMachine"]
-script = ExtResource("4_wu0n7")
+[node name="Walk" type="Node" parent="StateMachine"]
+script = ExtResource("9_mxhgp")
 
-[node name="IdleRight" type="Node" parent="StateMachine"]
-script = ExtResource("4_43y4t")
+[node name="Idle" type="Node" parent="StateMachine"]
+script = ExtResource("10_awppf")
 
-[node name="WalkLeft" type="Node" parent="StateMachine"]
-script = ExtResource("5_vk8em")
-
-[node name="WalkRight" type="Node" parent="StateMachine"]
-script = ExtResource("6_wu0n7")
-
-[node name="RunningLeft" type="Node" parent="StateMachine"]
-script = ExtResource("7_3xy24")
-
-[node name="RunningRight" type="Node" parent="StateMachine"]
-script = ExtResource("8_mxhgp")
+[node name="Running" type="Node" parent="StateMachine"]
+script = ExtResource("7_vk8em")
