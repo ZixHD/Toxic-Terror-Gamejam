@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://bxs3kw4grss7j"]
+[gd_scene load_steps=35 format=4 uid="uid://bxs3kw4grss7j"]
 
 [ext_resource type="Script" uid="uid://buo767vbaef46" path="res://Map/test.gd" id="1_3noip"]
 [ext_resource type="PackedScene" uid="uid://ctu01ogyncypp" path="res://Entity/Player/Player.tscn" id="1_hxx1a"]
@@ -755,6 +755,184 @@ size = Vector2(30, 167)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3d36u"]
 size = Vector2(148, 49.75)
 
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_fammy"]
+_data = PackedByteArray("AAADAAUAAAABAAAAyAAAALcAAAAWBQAAUklGRg4FAABXRUJQVlA4TAEFAAAvx4AtED9gJAASEolKAt3h/yXOIhOwWBCfFhQTWghFbaRAuwsKrifBCDbxO/8B4HqjYZbs+LBpvwfZjW2HbbQtGIIaSAfCFVmAReRfEFgBgddC+hcf37tZPtuL/YroPwS1jQRJLphjlrtGM9fbj3i8xGxgZ3nLoHrVmnqpI1BTRFBlJoUDLQ9mznCg9YeZtwy6/luB8ClA5yuDUjBQZR86Fmj7twJdLwxK4UAPZuKBKjfhQKt+TG+leCC55/t0VtI9yz0UaJBoFwVyXEMAehltWGkMQPFAjvS54xhdxCMMrjERVZNsrFSHCwoHEhHVUfbCgLTUcNUh/X6kER1Fg4j0+ynHGPEIdvUuS08g+v1CVe/2UjyQI30WlMKAtFTfwKhpu352kWx0lOKBLOl4IUDmpViXLGL986RZ3T+LB7Kk7sfEI6gbL2fb2jkgM+/PzLw/Gyrq6+WspPvqQ4EGiXZRIMd1d1buUIgG2q4XAPFnWF3jgbIqG+dPTBDu7P0eEpSzl4QEtSG0HtBCgqAl4hwj4UCS5XVAGW3YhAFB3BkWDgTuUHjPIPLgScFA18JskICgVQTuRo8HQj947CQeyP4yCaBXapFBWcZnfwFQiwiCFWBsQkQDcQdPQNCjz7bYK8UD4YI/CcFAj48xG9hZ3jKoXrWmYWOgoqaIoMpMigYiFznDgdYfZt4y6PpvBcKnAJ2vDErBQJV96Fig7d8KdL0wKIUDPZiJB6rchAOt+jG9leKB5J7v01kpIghAL6MNK4UEiaiaZGOlGhGkn1ZaWFC9y9ITiH6xiAlqYj60SA4JyiLGG12lxQV5mzAiqPQ5nZWigc7KHQrRQNv1IqBnf6PuwVPX7Rok2kWBHBcDsqSqXZWN88coq3agMCAt1a6jMCAtNcKdvd+NoLsvDMiQPo+yFwakpWP77iVjORv5IK8ylrOXjB3jTesBbawN4SgMyJA+cd8wIFuqbD1xDoUetL2UvTAgLR1vGJAlHX6FTbKwSRY2yULn3GQ0I+vGBTk3Ow477hG++jAn0jVItIsCOS4GZErBHQrvGUQePGkSSB+HDOhamA0yEcRsW90qAnejzwKNxyEDQj947GQmSB+HPsj+MgmgV2qTQMYx8jtplvGlzADZ/RVpmwHicj62AoxNiFkg9WcUiDt4poG441D36LMt9krxQLjgT0Iw0ONNzZ8Js4Gd5Regd1a9ak3DxkBFTT0SNLHKTMJCgyZFLnJioUGzWn+YuWNB76yL7/p/0If/Xp585wuU+NKcKn+pkT7m2z5In+F8SXxpVg9m7ljQtCo3aaFBcy+nt1JaaNC05J7v01npjgVNDEAvow0r9VjQ1IuqSTZWqgsPmph+P9LMPNDs6l2WnkD0vwI9EjS1JuZrEn0hQTPLIszHFGh63rbtkaCJlT6ns9IdC5rUWblj5I4FTVuIbrsCRR9Vdf0FaFp5/N4NW6pHgqaGO/sb0iNBM8vZS3okaGYt218/6BsSNDNouzjnyy9AE3+FTbJEijqqSNC86DOMBc0K9PnCgt5a4xn1VP+KQZEWA+S50qSPF5Gs2nH0MprqWsxfGVzzWkUwvJ+91yT3zDNMJPeOst9Nu8nZTnQaNDa4pl6GABWacRkCtOsI0F7KcHHLIsMlTo1r+sdW+ib3G9wLWQHGn2FS4xn11efUijsD5Ljm9eizLfZKdyxoWrjgTwIWGjSnx4SZ0B8A")
+size_override = Vector2(200, 183)
+
+[sub_resource type="Animation" id="Animation_ovwea"]
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_vy383"]
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_woiea"]
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+
+[sub_resource type="Animation" id="Animation_or1p0"]
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+
+[sub_resource type="Animation" id="Animation_hocbg"]
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+
+[sub_resource type="Animation" id="Animation_d8yo2"]
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [5]
+}
+
+[sub_resource type="Animation" id="Animation_y471i"]
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
+}
+
+[sub_resource type="Animation" id="Animation_cpc75"]
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [7]
+}
+
+[sub_resource type="Animation" id="Animation_617hh"]
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+
+[sub_resource type="Animation" id="Animation_0xvhx"]
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [9]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ckxy3"]
+_data = {
+&"1": SubResource("Animation_cpc75"),
+&"2": SubResource("Animation_617hh"),
+&"3": SubResource("Animation_0xvhx"),
+&"4": SubResource("Animation_hocbg"),
+&"5": SubResource("Animation_d8yo2"),
+&"6": SubResource("Animation_y471i"),
+&"7": SubResource("Animation_vy383"),
+&"8": SubResource("Animation_woiea"),
+&"9": SubResource("Animation_or1p0"),
+&"idle": SubResource("Animation_ovwea")
+}
+
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_3noip")
 
@@ -851,6 +1029,40 @@ shape = SubResource("RectangleShape2D_3d36u")
 
 [node name="KeyPad" parent="Objects" instance=ExtResource("3_lhw50")]
 position = Vector2(1116, 69)
+
+[node name="Sprite2D" type="Sprite2D" parent="Objects/KeyPad"]
+texture_filter = 1
+texture = SubResource("PortableCompressedTexture2D_fammy")
+hframes = 4
+vframes = 3
+frame = 7
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 0,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "Objects/KeyPad/AnimationPlayer",
+"scale": "1.0",
+"slice": "",
+"source": "res://Assets/Objects/password_pad.aseprite",
+"source_uid": 2351317668348423586
+}
+metadata/_aseprite_wizard_source_file_hash_ = "5f34671d773f7b7e2b9d194f31ca79af"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Objects/KeyPad"]
+libraries = {
+&"": SubResource("AnimationLibrary_ckxy3")
+}
 
 [node name="StairRail1" type="StaticBody2D" parent="Objects"]
 position = Vector2(394, 160)

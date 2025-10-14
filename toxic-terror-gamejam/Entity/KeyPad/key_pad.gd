@@ -1,7 +1,8 @@
 extends Node
 
-@onready var main_layer: TileMapLayer = $"../Layers/MainLayer"
-@onready var player: CharacterBody2D = $"../Player"
+@onready var main_layer: TileMapLayer = $"../../Layers/MainLayer"
+@onready var player: CharacterBody2D = $"../../Player"
+
 
 @onready var interaction_area: InteractionArea = $InteractionArea
 var interacting: bool = false

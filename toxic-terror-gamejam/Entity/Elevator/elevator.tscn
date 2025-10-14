@@ -1,11 +1,11 @@
-[gd_scene load_steps=11 format=4 uid="uid://cqjl7myebbg2s"]
+[gd_scene load_steps=13 format=4 uid="uid://cqjl7myebbg2s"]
 
 [ext_resource type="Script" uid="uid://cv4q31fu5cihv" path="res://Entity/Elevator/elevator.gd" id="1_de7kw"]
 [ext_resource type="PackedScene" uid="uid://ln0u1gs5g330" path="res://Utils/Interaction/interaction_area/interaction_area.tscn" id="2_ux8cn"]
 [ext_resource type="Texture2D" uid="uid://d1qcle38bgfki" path="res://Assets/Objects/gear1.png" id="3_ux8cn"]
 
-[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_de7kw"]
-_data = PackedByteArray("AAADAAUAAAABAAAAQAAAACsAAABEAQAAUklGRjwBAABXRUJQVlA4TDABAAAvP4AKEFegKJKk5vLdM4EHjGORLzbUtJHkHIN8bfzu+dN5EqcHoKhtI6YU2hskjvLhXL/5DwA4tybT8rA3/QOx1Jgk3v3tvQG4tbU5agYyMv5dfLZkhLYAb0LbwmwH/C0QeklDJmVMmVbzSVtARP8ZuG2kqFm6HC38Qqk2kUJ46865pQFeFVH9agmAi8mxDuUPtNbJD6hFUga1yEqgVtkV1dk3pPGLXjfJqAtwm8/nNJlDSGaWsTDncwXz1iCvjX3dW4U0nNgjd6by2Hhzkcz+BGVgBid+FEHL4Dpzmf+irGYP7w0ZnkghdPAcvd+FebQJ5Er/znY43A+tdxiHZuD6+tYIst6hHpqB6+tw4yalKPrBCxFF8CKNS0EamzS+6XsR0Tghdxw7pAI0JECohKYK")
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_ux8cn"]
+_data = PackedByteArray("AAADAAUAAAABAAAAQAAAACsAAABUAQAAUklGRkwBAABXRUJQVlA4TD8BAAAvP4AKEFegKJKk5vLdM4EHjGORLzbUtJHkHIN8bfzu+dN5EqcHoKhtI6YU2hskjvLhXL/5DwA4tybT8rA3/QOx1Jgk3v3tvQG42fbGbWh37gzJOTu5S3kOkOfBArlWADcgVkh5VFG6pIvGFECIfx4NENF/hW3bNhKQdM8vxvGCaET8my7fzifA713af50nwPeZ1xOI/2ieul+wOXVbsDkNG7B5HD7Q5uEHasYrV8duoCPgJzPTA0OKqkqrqplZIbPguEqubiGzJeoT0cJcnUX8WSpL9isZLUbbwM2qFsJ7ZvFvUB/E0FzdQapdtNJjJykauPQvRg6eIcuCdoOGaWVpKNPqfby9fb61dud9dALffvI4N5C1O0+iE/j2Ezh4emryOqykJsNK38ZKgtG3h+uK1KyDfLm1SCsIlEBpg7IHAA==")
 size_override = Vector2(64, 43)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f73sr"]
@@ -35,7 +35,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-20, -7)]
+"values": [Vector2(-18.5, -16.5)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -97,6 +97,146 @@ tracks/6/keys = {
 "update": 0,
 "values": [Vector2(0, 6)]
 }
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("FrontRail:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -2.5)]
+}
+
+[sub_resource type="Animation" id="Animation_4q2bv"]
+resource_name = "ascend"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Gear2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(22, 210), Vector2(22, 10)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Gear1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-22, 210), Vector2(-22, 10)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 206), Vector2(0, 6)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Marker2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-18.5, 184), Vector2(-18.5, -8.5)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprite2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 200), Vector2(0, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Gear1:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -25.132742]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Gear2:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 25.132742]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("FrontRail:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 197.5), Vector2(0, -2.5)]
+}
+
+[sub_resource type="Animation" id="Animation_e071m"]
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FrontRail:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = false
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
 
 [sub_resource type="Animation" id="Animation_ux8cn"]
 resource_name = "descend"
@@ -123,7 +263,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 8),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(-19.5, -8.5), Vector2(-19.5, 190)]
+"values": [Vector2(-18.5, -16), Vector2(-18.5, 184)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -185,104 +325,33 @@ tracks/6/keys = {
 "update": 0,
 "values": [Vector2(0, 6), Vector2(0, 206)]
 }
-
-[sub_resource type="Animation" id="Animation_4q2bv"]
-resource_name = "ascend"
-length = 8.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Gear2:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("FrontRail:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
 "times": PackedFloat32Array(0, 8),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(22, 210), Vector2(22, 10)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Gear1:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 8),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-22, 210), Vector2(-22, 10)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("CollisionShape2D:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 8),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0, 206), Vector2(0, 6)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Marker2D:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0, 8),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-19.5, 190), Vector2(-19.5, -8.5)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Sprite2D:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 8),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0, 200), Vector2(0, 0)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Gear1:rotation")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0, 8),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, -25.132742]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Gear2:rotation")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0, 8),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [0.0, 25.132742]
+"values": [Vector2(0, -2.5), Vector2(0, 197.5)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4q2bv"]
 _data = {
 &"RESET": SubResource("Animation_f73sr"),
 &"ascend": SubResource("Animation_4q2bv"),
+&"default": SubResource("Animation_e071m"),
 &"descend": SubResource("Animation_ux8cn")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ux8cn"]
 size = Vector2(79.5, 9)
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_53ohf"]
+_data = PackedByteArray("AAADAAUAAAABAAAAQAAAAAwAAABcAAAAUklGRlQAAABXRUJQVlA4TEcAAAAvP8ACEB8gJCBkS/x/5o2QgAz5oiEkIGRX/L9lw/wHoPpTQU0kKRKPRgqPYAITmMDEhRNdHtF/IUEizSkPdYFzAcP9tzPAAgA=")
+size_override = Vector2(64, 12)
 
 [node name="Elevator" type="StaticBody2D"]
 position = Vector2(0, 1)
@@ -290,9 +359,10 @@ scale = Vector2(2, 2)
 script = ExtResource("1_de7kw")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
 texture_filter = 1
 scale = Vector2(1.2421875, 0.9696585)
-texture = SubResource("PortableCompressedTexture2D_de7kw")
+texture = SubResource("PortableCompressedTexture2D_ux8cn")
 metadata/_aseprite_wizard_interface_config_ = {
 "pending_changes": {}
 }
@@ -314,7 +384,7 @@ metadata/_aseprite_wizard_config_ = {
 "source": "res://Assets/Objects/lift.aseprite",
 "source_uid": 8343937746080951720
 }
-metadata/_aseprite_wizard_source_file_hash_ = "133fad20dd03491acb77d7dbd6945f92"
+metadata/_aseprite_wizard_source_file_hash_ = "ea76689e24d684b8b68e118acae37c4f"
 
 [node name="InteractionArea" parent="." instance=ExtResource("2_ux8cn")]
 position = Vector2(-22.5, 7)
@@ -329,14 +399,15 @@ libraries = {
 }
 
 [node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(-20, -7)
+position = Vector2(-18.5, -16.5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(0, 6)
 shape = SubResource("RectangleShape2D_ux8cn")
 
 [node name="Gear1" type="StaticBody2D" parent="."]
-z_index = -1
+z_index = -2
 position = Vector2(-22, 10)
 
 [node name="Sprite2D" type="Sprite2D" parent="Gear1"]
@@ -344,10 +415,39 @@ texture_filter = 1
 texture = ExtResource("3_ux8cn")
 
 [node name="Gear2" type="StaticBody2D" parent="."]
-z_index = -1
+z_index = -2
 position = Vector2(22, 10)
 rotation = 6.2831855
 
 [node name="Sprite2D" type="Sprite2D" parent="Gear2"]
 texture_filter = 1
 texture = ExtResource("3_ux8cn")
+
+[node name="FrontRail" type="Sprite2D" parent="."]
+z_index = 1
+texture_filter = 1
+position = Vector2(0, -2.5)
+scale = Vector2(1.2421875, 1)
+texture = SubResource("PortableCompressedTexture2D_53ohf")
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 0,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "AnimationPlayer",
+"scale": "1.0",
+"slice": "",
+"source": "res://Assets/Objects/lift_ograda.aseprite",
+"source_uid": 4920401139360161116
+}
+metadata/_aseprite_wizard_source_file_hash_ = "10ff447afa992c52c107e892c10f9981"

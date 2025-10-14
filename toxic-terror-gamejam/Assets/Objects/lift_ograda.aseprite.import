@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://ccdqj12b77yxo"
+path="res://.godot/imported/lift_ograda.aseprite-5239a93e0ad77542ad9b15d32974bc9c.res"
+
+[deps]
+
+source_file="res://Assets/Objects/lift_ograda.aseprite"
+dest_files=["res://.godot/imported/lift_ograda.aseprite-5239a93e0ad77542ad9b15d32974bc9c.res"]
+
+[params]
+
