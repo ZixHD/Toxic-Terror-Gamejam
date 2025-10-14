@@ -1,6 +1,6 @@
 extends Node
 
-@onready var tile_map_layer: TileMapLayer = $"../TileMapLayer"
+@onready var main_layer: TileMapLayer = $"../Layers/MainLayer"
 @onready var player: CharacterBody2D = $"../Player"
 
 @onready var interaction_area: InteractionArea = $InteractionArea
@@ -12,7 +12,7 @@ func _ready() -> void:
 	
 func _physics_process(_delta: float) -> void:
 	if interacting:
-		tile_map_layer.visible = false
+		main_layer.visible = false
 		player.velocity = Vector2.ZERO
 		player.visible = false
 

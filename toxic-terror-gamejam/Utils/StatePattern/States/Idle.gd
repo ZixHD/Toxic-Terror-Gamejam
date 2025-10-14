@@ -7,7 +7,6 @@ class_name Idle
 var rng = RandomNumberGenerator.new()
 
 func Enter():
-	print("idle")
 	_update_animation()
 	
 func _update_animation():

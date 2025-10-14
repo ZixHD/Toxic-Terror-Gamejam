@@ -6,7 +6,6 @@ class_name Walk
 
 func Enter():
 	_update_animation()
-	print("walk")
 func _update_animation():
 	if player.last_facing_direction == "right":
 		animation_player.play("walkR")
