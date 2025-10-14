@@ -35,6 +35,7 @@ func _change_state(direction_x):
 		player.last_facing_direction = "left"
 	elif direction_x > 0:
 		player.last_facing_direction = "right"
+	_update_animation()
 	
 	if direction_x == 0:
 		Transitioned.emit(self, "idle")
