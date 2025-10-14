@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://bxs3kw4grss7j"]
+[gd_scene load_steps=22 format=4 uid="uid://bxs3kw4grss7j"]
 
 [ext_resource type="Script" uid="uid://buo767vbaef46" path="res://Map/test.gd" id="1_3noip"]
 [ext_resource type="PackedScene" uid="uid://ctu01ogyncypp" path="res://Entity/Player/Player.tscn" id="1_hxx1a"]
@@ -6,8 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://c2wgwwhw7tct5" path="res://Assets/Map/WholeMap.png" id="2_lhw50"]
 [ext_resource type="PackedScene" uid="uid://dg17rlvu6dhy2" path="res://Entity/KeyPad/key_pad.tscn" id="3_lhw50"]
 [ext_resource type="Texture2D" uid="uid://ckv8vn73a6j4r" path="res://Assets/Map/sideroom1.png" id="4_xpynk"]
-[ext_resource type="Script" uid="uid://b4o2tnpc0heat" path="res://Map/door_1.gd" id="5_0q0wn"]
+[ext_resource type="Script" uid="uid://b4o2tnpc0heat" path="res://Map/Doors/door_1.gd" id="5_0q0wn"]
 [ext_resource type="PackedScene" uid="uid://cqjl7myebbg2s" path="res://Entity/Elevator/elevator.tscn" id="6_tyb8m"]
+[ext_resource type="Script" uid="uid://btkkw162ct38h" path="res://Map/Doors/door_2.gd" id="7_f17lw"]
 [ext_resource type="PackedScene" uid="uid://by88lr47yw5hw" path="res://UI/GameScreens/Settings/settings.tscn" id="8_xpynk"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3d36u"]
@@ -738,6 +739,9 @@ sources/0 = SubResource("TileSetAtlasSource_f17lw")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xpynk"]
 size = Vector2(175, 20)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f17lw"]
+size = Vector2(143.5, 20)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kmgeg"]
 size = Vector2(30, 167)
 
@@ -746,6 +750,9 @@ size = Vector2(148, 49.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lhw50"]
 size = Vector2(69, 72.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fammy"]
+size = Vector2(73, 77)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_3noip")
@@ -767,12 +774,19 @@ tile_map_data = PackedByteArray("AADd/wQAAAAAAAQAAADe/wQAAAABAAQAAADf/wQAAAACAAQ
 tile_set = SubResource("TileSet_fammy")
 
 [node name="SideRoom1" type="Area2D" parent="Layers/SideRooms"]
-collision_layer = 0
-collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Layers/SideRooms/SideRoom1"]
 position = Vector2(-56, 53.5)
 shape = SubResource("RectangleShape2D_xpynk")
+
+[node name="SideRoom2" type="Area2D" parent="Layers/SideRooms"]
+position = Vector2(-425, 51)
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Layers/SideRooms/SideRoom2"]
+position = Vector2(-61.75, 0)
+shape = SubResource("RectangleShape2D_f17lw")
 
 [node name="BunkerDoor" type="StaticBody2D" parent="."]
 position = Vector2(1154, 81)
@@ -798,14 +812,24 @@ color = Color(0.09239707, 0.09239706, 0.09239706, 1)
 [node name="Doors" type="Node" parent="."]
 
 [node name="Door_1" type="Area2D" parent="Doors"]
-position = Vector2(798, 232)
+position = Vector2(-119, 161)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("5_0q0wn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/Door_1"]
-position = Vector2(-917.5, -72.75)
+position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_lhw50")
+
+[node name="Door_2" type="Area2D" parent="Doors"]
+position = Vector2(-842, 155)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("7_f17lw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/Door_2"]
+position = Vector2(2.5, 5.5)
+shape = SubResource("RectangleShape2D_fammy")
 
 [node name="Elevator" parent="." instance=ExtResource("6_tyb8m")]
 position = Vector2(-367, 240)
@@ -818,7 +842,7 @@ offset_right = -367.0
 offset_bottom = 240.0
 
 [node name="Player" parent="." instance=ExtResource("1_hxx1a")]
-position = Vector2(-307, 235)
+position = Vector2(-741, 190)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(-89, 12)
@@ -826,5 +850,9 @@ zoom = Vector2(2, 2)
 
 [connection signal="body_entered" from="Layers/SideRooms/SideRoom1" to="Doors/Door_1" method="_on_side_room_1_body_entered"]
 [connection signal="body_exited" from="Layers/SideRooms/SideRoom1" to="Doors/Door_1" method="_on_side_room_1_body_exited"]
+[connection signal="body_entered" from="Layers/SideRooms/SideRoom2" to="Doors/Door_2" method="_on_side_room_2_body_entered"]
+[connection signal="body_exited" from="Layers/SideRooms/SideRoom2" to="Doors/Door_2" method="_on_side_room_2_body_exited"]
 [connection signal="body_entered" from="Doors/Door_1" to="Doors/Door_1" method="_on_body_entered"]
 [connection signal="body_exited" from="Doors/Door_1" to="Doors/Door_1" method="_on_body_exited"]
+[connection signal="body_entered" from="Doors/Door_2" to="Doors/Door_2" method="_on_body_entered"]
+[connection signal="body_exited" from="Doors/Door_2" to="Doors/Door_2" method="_on_body_exited"]
