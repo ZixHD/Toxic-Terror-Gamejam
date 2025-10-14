@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://bxs3kw4grss7j"]
+[gd_scene load_steps=23 format=4 uid="uid://bxs3kw4grss7j"]
 
 [ext_resource type="Script" uid="uid://buo767vbaef46" path="res://Map/test.gd" id="1_3noip"]
 [ext_resource type="PackedScene" uid="uid://ctu01ogyncypp" path="res://Entity/Player/Player.tscn" id="1_hxx1a"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cqjl7myebbg2s" path="res://Entity/Elevator/elevator.tscn" id="6_tyb8m"]
 [ext_resource type="Script" uid="uid://btkkw162ct38h" path="res://Map/Doors/door_2.gd" id="7_f17lw"]
 [ext_resource type="PackedScene" uid="uid://by88lr47yw5hw" path="res://UI/GameScreens/Settings/settings.tscn" id="8_xpynk"]
+[ext_resource type="Texture2D" uid="uid://dpalthtixq4xh" path="res://Assets/Objects/gilender.png" id="11_fammy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3d36u"]
 texture = ExtResource("1_kmgeg")
@@ -742,17 +743,17 @@ size = Vector2(175, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f17lw"]
 size = Vector2(143.5, 20)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kmgeg"]
-size = Vector2(30, 167)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3d36u"]
-size = Vector2(148, 49.75)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lhw50"]
 size = Vector2(69, 72.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fammy"]
 size = Vector2(73, 77)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kmgeg"]
+size = Vector2(30, 167)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3d36u"]
+size = Vector2(148, 49.75)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_3noip")
@@ -774,12 +775,16 @@ tile_map_data = PackedByteArray("AADd/wQAAAAAAAQAAADe/wQAAAABAAQAAADf/wQAAAACAAQ
 tile_set = SubResource("TileSet_fammy")
 
 [node name="SideRoom1" type="Area2D" parent="Layers/SideRooms"]
+visible = false
+collision_layer = 0
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Layers/SideRooms/SideRoom1"]
 position = Vector2(-56, 53.5)
 shape = SubResource("RectangleShape2D_xpynk")
 
 [node name="SideRoom2" type="Area2D" parent="Layers/SideRooms"]
+visible = false
 position = Vector2(-425, 51)
 collision_layer = 0
 collision_mask = 2
@@ -787,23 +792,6 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Layers/SideRooms/SideRoom2"]
 position = Vector2(-61.75, 0)
 shape = SubResource("RectangleShape2D_f17lw")
-
-[node name="BunkerDoor" type="StaticBody2D" parent="."]
-position = Vector2(1154, 81)
-
-[node name="Door_Collision" type="CollisionShape2D" parent="BunkerDoor"]
-position = Vector2(2, 2)
-shape = SubResource("RectangleShape2D_kmgeg")
-
-[node name="Boxes" type="StaticBody2D" parent="."]
-position = Vector2(953, 83)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Boxes"]
-position = Vector2(-24, 19.875)
-shape = SubResource("RectangleShape2D_3d36u")
-
-[node name="KeyPad" parent="." instance=ExtResource("3_lhw50")]
-position = Vector2(1116, 69)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 visible = false
@@ -831,9 +819,6 @@ script = ExtResource("7_f17lw")
 position = Vector2(2.5, 5.5)
 shape = SubResource("RectangleShape2D_fammy")
 
-[node name="Elevator" parent="." instance=ExtResource("6_tyb8m")]
-position = Vector2(-367, 240)
-
 [node name="Settings" parent="." instance=ExtResource("8_xpynk")]
 visible = false
 offset_left = -367.0
@@ -847,6 +832,49 @@ position = Vector2(-741, 190)
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(-89, 12)
 zoom = Vector2(2, 2)
+
+[node name="Objects" type="Node" parent="."]
+
+[node name="BunkerDoor" type="StaticBody2D" parent="Objects"]
+position = Vector2(1154, 81)
+
+[node name="Door_Collision" type="CollisionShape2D" parent="Objects/BunkerDoor"]
+position = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_kmgeg")
+
+[node name="Boxes" type="StaticBody2D" parent="Objects"]
+position = Vector2(953, 83)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Objects/Boxes"]
+position = Vector2(-24, 19.875)
+shape = SubResource("RectangleShape2D_3d36u")
+
+[node name="KeyPad" parent="Objects" instance=ExtResource("3_lhw50")]
+position = Vector2(1116, 69)
+
+[node name="StairRail1" type="StaticBody2D" parent="Objects"]
+position = Vector2(394, 160)
+
+[node name="Sprite2D" type="Sprite2D" parent="Objects/StairRail1"]
+z_index = -1
+texture_filter = 1
+position = Vector2(4.9262896, -0.06640887)
+rotation = -3.9096184
+scale = Vector2(2.5810928, 1.9333292)
+texture = ExtResource("11_fammy")
+
+[node name="StairRail2" type="StaticBody2D" parent="Objects"]
+position = Vector2(397, 191)
+
+[node name="Sprite2D" type="Sprite2D" parent="Objects/StairRail2"]
+texture_filter = 1
+position = Vector2(3.3855624, 1.4216948)
+rotation = -3.9096184
+scale = Vector2(2.4766035, 1.9333292)
+texture = ExtResource("11_fammy")
+
+[node name="Elevator" parent="Objects" instance=ExtResource("6_tyb8m")]
+position = Vector2(-359, 270)
 
 [connection signal="body_entered" from="Layers/SideRooms/SideRoom1" to="Doors/Door_1" method="_on_side_room_1_body_entered"]
 [connection signal="body_exited" from="Layers/SideRooms/SideRoom1" to="Doors/Door_1" method="_on_side_room_1_body_exited"]
