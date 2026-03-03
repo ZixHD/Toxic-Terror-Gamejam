@@ -759,7 +759,7 @@ size = Vector2(148, 49.75)
 _data = PackedByteArray("AAADAAUAAAABAAAAyAAAALcAAAAWBQAAUklGRg4FAABXRUJQVlA4TAEFAAAvx4AtED9gJAASEolKAt3h/yXOIhOwWBCfFhQTWghFbaRAuwsKrifBCDbxO/8B4HqjYZbs+LBpvwfZjW2HbbQtGIIaSAfCFVmAReRfEFgBgddC+hcf37tZPtuL/YroPwS1jQRJLphjlrtGM9fbj3i8xGxgZ3nLoHrVmnqpI1BTRFBlJoUDLQ9mznCg9YeZtwy6/luB8ClA5yuDUjBQZR86Fmj7twJdLwxK4UAPZuKBKjfhQKt+TG+leCC55/t0VtI9yz0UaJBoFwVyXEMAehltWGkMQPFAjvS54xhdxCMMrjERVZNsrFSHCwoHEhHVUfbCgLTUcNUh/X6kER1Fg4j0+ynHGPEIdvUuS08g+v1CVe/2UjyQI30WlMKAtFTfwKhpu352kWx0lOKBLOl4IUDmpViXLGL986RZ3T+LB7Kk7sfEI6gbL2fb2jkgM+/PzLw/Gyrq6+WspPvqQ4EGiXZRIMd1d1buUIgG2q4XAPFnWF3jgbIqG+dPTBDu7P0eEpSzl4QEtSG0HtBCgqAl4hwj4UCS5XVAGW3YhAFB3BkWDgTuUHjPIPLgScFA18JskICgVQTuRo8HQj947CQeyP4yCaBXapFBWcZnfwFQiwiCFWBsQkQDcQdPQNCjz7bYK8UD4YI/CcFAj48xG9hZ3jKoXrWmYWOgoqaIoMpMigYiFznDgdYfZt4y6PpvBcKnAJ2vDErBQJV96Fig7d8KdL0wKIUDPZiJB6rchAOt+jG9leKB5J7v01kpIghAL6MNK4UEiaiaZGOlGhGkn1ZaWFC9y9ITiH6xiAlqYj60SA4JyiLGG12lxQV5mzAiqPQ5nZWigc7KHQrRQNv1IqBnf6PuwVPX7Rok2kWBHBcDsqSqXZWN88coq3agMCAt1a6jMCAtNcKdvd+NoLsvDMiQPo+yFwakpWP77iVjORv5IK8ylrOXjB3jTesBbawN4SgMyJA+cd8wIFuqbD1xDoUetL2UvTAgLR1vGJAlHX6FTbKwSRY2yULn3GQ0I+vGBTk3Ow477hG++jAn0jVItIsCOS4GZErBHQrvGUQePGkSSB+HDOhamA0yEcRsW90qAnejzwKNxyEDQj947GQmSB+HPsj+MgmgV2qTQMYx8jtplvGlzADZ/RVpmwHicj62AoxNiFkg9WcUiDt4poG441D36LMt9krxQLjgT0Iw0ONNzZ8Js4Gd5Regd1a9ak3DxkBFTT0SNLHKTMJCgyZFLnJioUGzWn+YuWNB76yL7/p/0If/Xp585wuU+NKcKn+pkT7m2z5In+F8SXxpVg9m7ljQtCo3aaFBcy+nt1JaaNC05J7v01npjgVNDEAvow0r9VjQ1IuqSTZWqgsPmph+P9LMPNDs6l2WnkD0vwI9EjS1JuZrEn0hQTPLIszHFGh63rbtkaCJlT6ns9IdC5rUWblj5I4FTVuIbrsCRR9Vdf0FaFp5/N4NW6pHgqaGO/sb0iNBM8vZS3okaGYt218/6BsSNDNouzjnyy9AE3+FTbJEijqqSNC86DOMBc0K9PnCgt5a4xn1VP+KQZEWA+S50qSPF5Gs2nH0MprqWsxfGVzzWkUwvJ+91yT3zDNMJPeOst9Nu8nZTnQaNDa4pl6GABWacRkCtOsI0F7KcHHLIsMlTo1r+sdW+ib3G9wLWQHGn2FS4xn11efUijsD5Ljm9eizLfZKdyxoWrjgTwIWGjSnx4SZ0B8A")
 size_override = Vector2(200, 183)
 
-[sub_resource type="Animation" id="Animation_ovwea"]
+[sub_resource type="Animation" id="Animation_cpc75"]
 length = 0.1
 loop_mode = 1
 tracks/0/type = "value"
@@ -772,10 +772,10 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [0]
+"values": [7]
 }
 
-[sub_resource type="Animation" id="Animation_vy383"]
+[sub_resource type="Animation" id="Animation_617hh"]
 length = 0.1
 loop_mode = 1
 tracks/0/type = "value"
@@ -788,10 +788,10 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [1]
+"values": [8]
 }
 
-[sub_resource type="Animation" id="Animation_woiea"]
+[sub_resource type="Animation" id="Animation_0xvhx"]
 length = 0.1
 loop_mode = 1
 tracks/0/type = "value"
@@ -804,23 +804,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [2]
-}
-
-[sub_resource type="Animation" id="Animation_or1p0"]
-length = 0.1
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = false
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [3]
+"values": [9]
 }
 
 [sub_resource type="Animation" id="Animation_hocbg"]
@@ -871,7 +855,7 @@ tracks/0/keys = {
 "values": [6]
 }
 
-[sub_resource type="Animation" id="Animation_cpc75"]
+[sub_resource type="Animation" id="Animation_vy383"]
 length = 0.1
 loop_mode = 1
 tracks/0/type = "value"
@@ -884,10 +868,10 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [7]
+"values": [1]
 }
 
-[sub_resource type="Animation" id="Animation_617hh"]
+[sub_resource type="Animation" id="Animation_woiea"]
 length = 0.1
 loop_mode = 1
 tracks/0/type = "value"
@@ -900,10 +884,10 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [8]
+"values": [2]
 }
 
-[sub_resource type="Animation" id="Animation_0xvhx"]
+[sub_resource type="Animation" id="Animation_or1p0"]
 length = 0.1
 loop_mode = 1
 tracks/0/type = "value"
@@ -916,7 +900,23 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [9]
+"values": [3]
+}
+
+[sub_resource type="Animation" id="Animation_ovwea"]
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ckxy3"]
