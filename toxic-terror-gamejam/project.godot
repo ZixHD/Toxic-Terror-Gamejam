@@ -21,6 +21,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+GameManager="*uid://bb7ebomtbsgwr"
 InteractionManager="*res://Singleton/InteractionManager/interaction_manager.gd"
 
 [editor_plugins]

@@ -1,0 +1,294 @@
+[gd_scene format=4 uid="uid://5wdyj08a3bus"]
+
+[ext_resource type="Script" uid="uid://ccclpvwlhoi73" path="res://UI/Keypad/keypad.gd" id="1_efcma"]
+
+[sub_resource type="Animation" id="Animation_efcma"]
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [7]
+}
+
+[sub_resource type="Animation" id="Animation_p43cc"]
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+
+[sub_resource type="Animation" id="Animation_o4m6o"]
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [9]
+}
+
+[sub_resource type="Animation" id="Animation_jw5q3"]
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+
+[sub_resource type="Animation" id="Animation_y55iw"]
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [5]
+}
+
+[sub_resource type="Animation" id="Animation_4wfww"]
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
+}
+
+[sub_resource type="Animation" id="Animation_1ld85"]
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_tkmxm"]
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+
+[sub_resource type="Animation" id="Animation_yu7hq"]
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+
+[sub_resource type="Animation" id="Animation_guhuc"]
+length = 0.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jmdj7"]
+_data = {
+&"1": SubResource("Animation_efcma"),
+&"2": SubResource("Animation_p43cc"),
+&"3": SubResource("Animation_o4m6o"),
+&"4": SubResource("Animation_jw5q3"),
+&"5": SubResource("Animation_y55iw"),
+&"6": SubResource("Animation_4wfww"),
+&"7": SubResource("Animation_1ld85"),
+&"8": SubResource("Animation_tkmxm"),
+&"9": SubResource("Animation_yu7hq"),
+&"idle": SubResource("Animation_guhuc")
+}
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_icpbj"]
+_data = PackedByteArray("AAADAAUAAAABAAAAyAAAALcAAAAWBQAAUklGRg4FAABXRUJQVlA4TAEFAAAvx4AtED9gJAASEolKAt3h/yXOIhOwWBCfFhQTWghFbaRAuwsKrifBCDbxO/8B4HqjYZbs+LBpvwfZjW2HbbQtGIIaSAfCFVmAReRfEFgBgddC+hcf37tZPtuL/YroPwS1jQRJLphjlrtGM9fbj3i8xGxgZ3nLoHrVmnqpI1BTRFBlJoUDLQ9mznCg9YeZtwy6/luB8ClA5yuDUjBQZR86Fmj7twJdLwxK4UAPZuKBKjfhQKt+TG+leCC55/t0VtI9yz0UaJBoFwVyXEMAehltWGkMQPFAjvS54xhdxCMMrjERVZNsrFSHCwoHEhHVUfbCgLTUcNUh/X6kER1Fg4j0+ynHGPEIdvUuS08g+v1CVe/2UjyQI30WlMKAtFTfwKhpu352kWx0lOKBLOl4IUDmpViXLGL986RZ3T+LB7Kk7sfEI6gbL2fb2jkgM+/PzLw/Gyrq6+WspPvqQ4EGiXZRIMd1d1buUIgG2q4XAPFnWF3jgbIqG+dPTBDu7P0eEpSzl4QEtSG0HtBCgqAl4hwj4UCS5XVAGW3YhAFB3BkWDgTuUHjPIPLgScFA18JskICgVQTuRo8HQj947CQeyP4yCaBXapFBWcZnfwFQiwiCFWBsQkQDcQdPQNCjz7bYK8UD4YI/CcFAj48xG9hZ3jKoXrWmYWOgoqaIoMpMigYiFznDgdYfZt4y6PpvBcKnAJ2vDErBQJV96Fig7d8KdL0wKIUDPZiJB6rchAOt+jG9leKB5J7v01kpIghAL6MNK4UEiaiaZGOlGhGkn1ZaWFC9y9ITiH6xiAlqYj60SA4JyiLGG12lxQV5mzAiqPQ5nZWigc7KHQrRQNv1IqBnf6PuwVPX7Rok2kWBHBcDsqSqXZWN88coq3agMCAt1a6jMCAtNcKdvd+NoLsvDMiQPo+yFwakpWP77iVjORv5IK8ylrOXjB3jTesBbawN4SgMyJA+cd8wIFuqbD1xDoUetL2UvTAgLR1vGJAlHX6FTbKwSRY2yULn3GQ0I+vGBTk3Ow477hG++jAn0jVItIsCOS4GZErBHQrvGUQePGkSSB+HDOhamA0yEcRsW90qAnejzwKNxyEDQj947GQmSB+HPsj+MgmgV2qTQMYx8jtplvGlzADZ/RVpmwHicj62AoxNiFkg9WcUiDt4poG441D36LMt9krxQLjgT0Iw0ONNzZ8Js4Gd5Regd1a9ak3DxkBFTT0SNLHKTMJCgyZFLnJioUGzWn+YuWNB76yL7/p/0If/Xp585wuU+NKcKn+pkT7m2z5In+F8SXxpVg9m7ljQtCo3aaFBcy+nt1JaaNC05J7v01npjgVNDEAvow0r9VjQ1IuqSTZWqgsPmph+P9LMPNDs6l2WnkD0vwI9EjS1JuZrEn0hQTPLIszHFGh63rbtkaCJlT6ns9IdC5rUWblj5I4FTVuIbrsCRR9Vdf0FaFp5/N4NW6pHgqaGO/sb0iNBM8vZS3okaGYt218/6BsSNDNouzjnyy9AE3+FTbJEijqqSNC86DOMBc0K9PnCgt5a4xn1VP+KQZEWA+S50qSPF5Gs2nH0MprqWsxfGVzzWkUwvJ+91yT3zDNMJPeOst9Nu8nZTnQaNDa4pl6GABWacRkCtOsI0F7KcHHLIsMlTo1r+sdW+ib3G9wLWQHGn2FS4xn11efUijsD5Ljm9eizLfZKdyxoWrjgTwIWGjSnx4SZ0B8A")
+size_override = Vector2(200, 183)
+
+[node name="KeypadScreen" type="Control" unique_id=998787999]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_efcma")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=932539347]
+libraries/ = SubResource("AnimationLibrary_jmdj7")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=783198555]
+texture_filter = 1
+scale = Vector2(10, 10)
+texture = SubResource("PortableCompressedTexture2D_icpbj")
+hframes = 4
+vframes = 3
+metadata/_aseprite_wizard_interface_config_ = {
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 0,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "AnimationPlayer",
+"scale": "1.0",
+"slice": "",
+"source": "res://Assets/Objects/password_pad.aseprite",
+"source_uid": 2351317668348423586
+}
+metadata/_aseprite_wizard_source_file_hash_ = "5f34671d773f7b7e2b9d194f31ca79af"
+
+[node name="Display" type="Label" parent="." unique_id=1211139229]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -73.0
+offset_top = -191.0
+offset_right = -33.0
+offset_bottom = -168.0
+grow_horizontal = 2
+scale = Vector2(4, 4)
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=937284306]
+z_index = -1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.175
+anchor_top = -0.51
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -160.0
+offset_top = -40.0
+offset_right = -180.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(10.5, 10.5)
+theme_override_constants/h_separation = 6
+theme_override_constants/v_separation = 3
+columns = 3
+
+[node name="Button_7" type="Button" parent="GridContainer" unique_id=1184440916]
+layout_mode = 2
+
+[node name="Button_8" type="Button" parent="GridContainer" unique_id=1806695237]
+layout_mode = 2
+
+[node name="Button_9" type="Button" parent="GridContainer" unique_id=1146810662]
+layout_mode = 2
+
+[node name="Button_4" type="Button" parent="GridContainer" unique_id=91559529]
+layout_mode = 2
+
+[node name="Button_5" type="Button" parent="GridContainer" unique_id=1345267933]
+layout_mode = 2
+
+[node name="Button_6" type="Button" parent="GridContainer" unique_id=1590786337]
+layout_mode = 2
+
+[node name="Button_1" type="Button" parent="GridContainer" unique_id=1866316358]
+layout_mode = 2
+
+[node name="Button_2" type="Button" parent="GridContainer" unique_id=1182711229]
+layout_mode = 2
+
+[node name="Button_3" type="Button" parent="GridContainer" unique_id=1173397159]
+layout_mode = 2
+
+[connection signal="pressed" from="GridContainer/Button_7" to="." method="_on_button_7_pressed"]
+[connection signal="pressed" from="GridContainer/Button_8" to="." method="_on_button_8_pressed"]
+[connection signal="pressed" from="GridContainer/Button_9" to="." method="_on_button_9_pressed"]
+[connection signal="pressed" from="GridContainer/Button_4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="GridContainer/Button_5" to="." method="_on_button_5_pressed"]
+[connection signal="pressed" from="GridContainer/Button_6" to="." method="_on_button_6_pressed"]
+[connection signal="pressed" from="GridContainer/Button_1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="GridContainer/Button_2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="GridContainer/Button_3" to="." method="_on_button_3_pressed"]
